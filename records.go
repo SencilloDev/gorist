@@ -21,11 +21,6 @@ import (
 	"net/http"
 )
 
-type Record[T any] struct {
-	ID     string `json:"id"`
-	Fields T      `json:"fields"`
-}
-
 func (c *Client) GetRecordsWithOptions(opts ...GristRequestOpt) (json.RawMessage, error) {
 	var r GristRequest
 
